@@ -3,12 +3,27 @@ from django.db import models
 
 class Ad(models.Model):
     name = models.CharField(max_length=300)
-    author = models.CharField(max_length=100)
+    author = models.ForeignKey('users.User', on_delete=models.CASCADE)
     price = models.PositiveIntegerField()
     description = models.TextField()
-    address = models.CharField(max_length=300)
     is_published = models.BooleanField()
+    category = models.ForeignKey('Category', on_delete=models.CASCADE)
+    image = models.ImageField(null=True, blank=True, upload_to="pictures")
+
+    class Meta:
+        verbose_name = "Объявление"
+        verbose_name_plural = "Объявления"
+
+    def __str__(self):
+        return self.name
 
 
 class Category(models.Model):
-    name= models.CharField(max_length=300)
+    name = models.CharField(max_length=300)
+
+    class Meta:
+        verbose_name = "Категория"
+        verbose_name_plural = "Категории"
+
+    def __str__(self):
+        return self.name
