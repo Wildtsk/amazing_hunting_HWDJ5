@@ -3,7 +3,7 @@ from django.db import models
 
 class Ad(models.Model):
     name = models.CharField(max_length=300)
-    author = models.ForeignKey('users.User', on_delete=models.CASCADE)
+    author = models.ForeignKey('users.User', related_name="ads", on_delete=models.CASCADE)
     price = models.PositiveIntegerField()
     description = models.TextField()
     is_published = models.BooleanField()

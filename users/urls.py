@@ -1,4 +1,5 @@
 from django.urls import path
+from rest_framework import routers
 
 from users.views import *
 
@@ -9,3 +10,8 @@ urlpatterns = [
     path('<int:pk>/update/', UserUpdateView.as_view()),
     path('<int:pk>/delete/', UserDeleteView.as_view())
 ]
+
+router = routers.SimpleRouter()
+router.register('location', LocationViewSet)
+
+urlpatterns += router.urls
