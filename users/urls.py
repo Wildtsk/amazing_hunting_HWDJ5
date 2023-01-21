@@ -12,6 +12,6 @@ urlpatterns = [
 ]
 
 router = routers.SimpleRouter()
-router.register('location', LocationViewSet)
+router.register('location', LocationViewSet) #/user/location/
 
 urlpatterns += router.urls
