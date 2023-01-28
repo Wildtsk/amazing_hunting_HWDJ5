@@ -56,7 +56,6 @@ class AdViewSet(ModelViewSet):
         if price_to:
             self.queryset = self.queryset.filter(price_lte=price_to)
 
-
         return super().list(request, *args, **kwargs)
 
 
