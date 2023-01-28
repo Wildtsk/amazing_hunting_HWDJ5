@@ -29,7 +29,7 @@ def convert(csv_file, json_file, model):
         json_f.write(json.dumps(result, ensure_ascii=False))
 
 
-convert('category.csv', 'categories.json', 'ads.category')
-convert('ad.csv', 'ads.json', 'ads.ad')
+convert('category.csv', 'categories.json', 'ad.category')
+convert('ad.csv', 'ads.json', 'ad.ad')
 convert('location.csv', 'location.json', 'users.location')
 convert('user.csv', 'user.json', 'users.user')

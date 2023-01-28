@@ -24,9 +24,9 @@ from amazing_hunting import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', root),
-    path('ad/', include('ads.urls.ad')),
-    path('cat/', include('ads.urls.cat')),
-    path('selection/', include('ads.urls.selection')),
+    path('ad/', include('ad.urls.ad')),
+    path('cat/', include('ad.urls.cat')),
+    path('selection/', include('ad.urls.selection')),
     path('user/', include('users.urls')),
 ]
 

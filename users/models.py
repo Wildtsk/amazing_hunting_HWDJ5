@@ -1,6 +1,10 @@
 from django.contrib.auth.models import AbstractUser
+from django.core.validators import RegexValidator
 from django.utils.translation import gettext_lazy as _
 from django.db import models
+
+from users.validators import check_birth_date, check_email_address
+
 
 # Create your models here.
 
@@ -27,6 +31,12 @@ class User(AbstractUser):
     role = models.CharField(max_length=9, choices=UserRoles.choices)
     age = models.PositiveSmallIntegerField(null=True, blank=True)
     locations = models.ManyToManyField(Location)
+    birth_data = models.DateField(verbose_name="Дата рождения", validators=[check_birth_date], null=True, blank=True)
+    email = models.EmailField(unique=True, blank=True, null=True, validators=[check_email_address])
+    # email = models.EmailField(unique=True, blank=True, null=True,
+    #                           validators=[RegexValidator(regex="@rambler.ru",
+    #                                                      inverse_match=True,
+    #                                                      message="регистрация с домена rambler.ru запрещена.")])
 
     class Meta:
         verbose_name = "Пользователь"
