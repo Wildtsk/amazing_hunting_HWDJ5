@@ -1,8 +1,8 @@
 from rest_framework import serializers
 from rest_framework.relations import SlugRelatedField
 
-from ads.models import Ad, Category, Selection
-from ads.validators import not_null
+from ad.models import Ad, Category, Selection
+from ad.validators import not_null
 from users.models import User
 
 

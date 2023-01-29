@@ -9,9 +9,9 @@ from django.views.generic import DetailView, ListView, CreateView, UpdateView, D
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
 
-from ads.models import Category, Ad
-from ads.permissions import IsAdOwnerOrStaff
-from ads.serializers import *
+from ad.models import Category, Ad
+from ad.permissions import IsAdOwnerOrStaff
+from ad.serializers import *
 
 
 class AdViewSet(ModelViewSet):

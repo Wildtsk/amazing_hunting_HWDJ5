@@ -1,7 +1,7 @@
 import pytest
 
 from tests.factories import AdFactory
-from ads.serializers import AdDetailSerializer
+from ad.serializers import AdDetailSerializer
 
 
 @pytest.mark.django_db

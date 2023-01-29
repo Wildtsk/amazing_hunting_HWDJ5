@@ -1,7 +1,7 @@
 from django.urls import path
 from rest_framework import routers
 
-from ads.views.selection import SelectionViewSet
+from ad.views.selection import SelectionViewSet
 urlpatterns = []
 
 router = routers.SimpleRouter()

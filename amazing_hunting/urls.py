@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 
-from ads.views.cat import root
+from ad.views.cat import root
 from amazing_hunting import settings
 
 urlpatterns = [

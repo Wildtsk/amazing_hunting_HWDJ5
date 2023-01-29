@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 
-from ads.views.cat import *
+from ad.views.cat import *
 
 urlpatterns = [
     path('', CatListView.as_view()),

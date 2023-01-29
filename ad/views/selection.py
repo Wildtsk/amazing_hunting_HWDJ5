@@ -1,9 +1,9 @@
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
 
-from ads.models import Selection
-from ads.permissions import IsSelectionOwner
-from ads.serializers import SelectionSerializer, SelectionDetailSerializer, SelectionListSerializer, \
+from ad.models import Selection
+from ad.permissions import IsSelectionOwner
+from ad.serializers import SelectionSerializer, SelectionDetailSerializer, SelectionListSerializer, \
     SelectionCreateSerializer
 
 

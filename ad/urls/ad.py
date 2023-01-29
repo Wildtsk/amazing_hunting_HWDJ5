@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
 
-from ads.views.ad import *
+from ad.views.ad import *
 
 urlpatterns = [
     # path('', AdListView.as_view()),

@@ -1,6 +1,6 @@
 import factory
 
-from ads.models import Ad, Category
+from ad.models import Ad, Category
 from users.models import User
 
 
