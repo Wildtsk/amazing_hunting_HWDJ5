@@ -8,7 +8,8 @@ def test_create_selection(client, access_token, user):
     ad_list = AdFactory.create_batch(3)
     data = {
         "name": "test",
-        "items": [ad.pk for ad in ad_list]
+        "items": [ad.pk for ad in ad_list],
+        "owner": "test_user"
     }
     expected_data = {
         "id": 1,
